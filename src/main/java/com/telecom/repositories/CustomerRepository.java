@@ -11,6 +11,6 @@ import com.telecom.entity.Customer;
 public interface CustomerRepository extends JpaRepository<Customer, Integer> {
 	
 	@Query(value = "SELECT pword FROM Customer WHERE cuid = :cuid", nativeQuery = true)
-    String  getp(@Param("cuid") String cuid);
+    String  getp(@Param("cuid") int cuid);
 
 }

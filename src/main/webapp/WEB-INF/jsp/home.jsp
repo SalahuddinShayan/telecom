@@ -11,7 +11,7 @@
 <h3>Welcome to the Complaint Redressal Site</h3>
 <h4>Please, login to continue.</h4>
 <a style="margin-right: 50px" href="elogin">Employ Login</a>
-<a href="">Customer Login</a> 
+<a href="cloginpage">Customer Login</a> 
 
 
 </body>

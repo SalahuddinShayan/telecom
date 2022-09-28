@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.telecom.entity.Customer;
 import com.telecom.repositories.CustomerRepository;
@@ -34,7 +35,30 @@ public class CustomerController {
     public String delete(@PathVariable int cuid){    
 		cusrepo.deleteById(cuid);    
         return "redirect:/customerlist";    
-    }     
+    }
+	
+	@RequestMapping("/cloginpage")    
+    public String loginpage(Model m){    
+        m.addAttribute("command", new Customer());  
+        return "cloginpage";
+    }
+	
+	@RequestMapping("/clogin")    
+    public String login(@RequestParam int cuid,@RequestParam String pword,Model m){    
+    	String p = cusrepo.getp(cuid);
+    	m.addAttribute("cuid", cuid);
+    	if(pword.equals(p)) {
+    		return "forward:/customer";
+    	}
+    	else {
+        return "afail";}
+    }
+	
+	@RequestMapping("/customer")
+    public String user(Model model) {
+       
+         return "customer";
+    }
 
 
 }
