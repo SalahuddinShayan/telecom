@@ -11,47 +11,48 @@
 <link href="${jstlCss}" rel="stylesheet" />
 <head>
 <meta charset="ISO-8859-1">
-<title>View and edit Engineer List</title>
+<title>View and edit Customer List</title>
 </head>
 <body>
 <div class="starter-template">
-   <h1>Engineers:</h1>
-   <table class="table table-striped table-hover table-condensed table-bordered">
+   <h1>Customers:</h1>
+   <table
+    class="table table-striped table-hover table-condensed table-bordered">
     <tr>
-     <th>Engineer Id</th>
-     <th>Engineer Name</th>
+     <th style ="margin-right: 50px">Customer Id</th>
+     <th>Customer Name</th>
      <th>Password</th>
      <th>Delete</th>
     </tr>
-    <c:forEach var="engineer" items="${engineers}">
+    <c:forEach var="customer" items="${customers}">
      <tr>
-      <td>${engineer.eid}</td>
-      <td>${engineer.ename}</td>
-      <td>${engineer.pword}</td>
-      <td><a href="deletemanager/${engineer.eid}">Delete</a></td>  
+      <td>${customer.cuid}</td>
+      <td>${customer.cuname}</td>
+      <td>${customer.pword}</td>
+      <td><a href="deletecustomer/${customer.cuid}">Delete</a></td>  
      </tr>
     </c:forEach>
    </table>
   </div>
   
-  <h1>Add a new Engineer or Update an existing one</h1>  
-       <form:form method="post" action="saveengineer">    
+  <h1>Add a new Customer or Update an existing one</h1>  
+       <form:form method="post" action="savecustomer">    
         <table >
          <tr>    
-          <td>Engineer Id : </td>   
-          <td><form:input path="eid"  /></td>  
+          <td>Customer Id : </td>   
+          <td><form:input path="cuid"  /></td>  
          </tr> 
          <tr>    
-          <td>Engineer Name: </td>   
-          <td><form:input path="ename"  /></td>  
+          <td>Customer Name: </td>   
+          <td><form:input path="cuname"  /></td>  
          </tr>     
          <tr>    
-          <td>Password</td>   
+          <td>Customer</td>   
           <td><form:input path="pword"  /></td>  
          </tr>          
          <tr>    
           <td> </td>    
-          <td><input type="submit" value="Add/Update Engineer" /></td>    
+          <td><input type="submit" value="Add/Update Customer" /></td>    
          </tr>    
         </table>    
        </form:form>

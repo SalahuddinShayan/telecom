@@ -11,28 +11,31 @@ public class Customer {
 	
 	@Id
 	@Column(name="cuid")
-	private int mid;
+	private int cuid;
 	
 	@Column(name="cuname")
-	private String mname;
+	private String cuname;
 	
 	@Column(name="pword")
 	private String pword;
 
-	public int getMid() {
-		return mid;
+	
+
+	public int getCuid() {
+		return cuid;
 	}
 
-	public void setMid(int mid) {
-		this.mid = mid;
+	public void setCuid(int cuid) {
+		this.cuid = cuid;
 	}
 
-	public String getMname() {
-		return mname;
+	
+	public String getCuname() {
+		return cuname;
 	}
 
-	public void setMname(String mname) {
-		this.mname = mname;
+	public void setCuname(String cuname) {
+		this.cuname = cuname;
 	}
 
 	public String getPword() {
