@@ -25,11 +25,6 @@ public class AdminController {
 	        return "elogin";           
 	    }
 	 
-	 @RequestMapping("/clogin")                     
-	    public String clogin() {
-	        return "clogin";           
-	    }
-	 
 	 @RequestMapping("/alogin")    
 	    public String login(@RequestParam String login,@RequestParam String password,Model m){    
 	    	String p = adminRepo.getp(login);
@@ -37,7 +32,7 @@ public class AdminController {
 	    		return "admin";
 	    	}
 	    	else {
-	        return "fail";}
+	        return "afail";}
 	    }
 	 
 	 @RequestMapping("/aloginpage")    

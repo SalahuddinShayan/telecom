@@ -8,8 +8,8 @@
 </head>
 <body>
 <h1>Wrong Credentials</h1>
-<a href="loginpage">Please, try again</a><br>
-<a href="welcome">Or go back to home page </a>
+<a href="home">Please, try again</a><br>
+
 
 </body>
 </html>
