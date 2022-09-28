@@ -8,9 +8,9 @@
 </head>
 <body>
 <h2>Welcome Admin! What do you want to do?</h2>
-<a href="managerlist" style="margin-bottom:50px">View and edit Manager List</a><br>
-<a href="" style="margin-bottom:50px">View and edit Manager List</a><br>
-<a href="" style="margin-bottom:50px">View and edit Manager List</a>
+<a href="managerlist" style="margin-bottom:50px">View and Edit Manager List</a><br>
+<a href="engineerlist" style="margin-bottom:50px">View and Edit Engineer List</a><br>
+<a href="" style="margin-bottom:50px">View and Edit Customer List</a>
 
 </body>
 </html>
