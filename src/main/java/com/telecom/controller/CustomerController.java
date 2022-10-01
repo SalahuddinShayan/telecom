@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.telecom.entity.Complaint;
 import com.telecom.entity.Customer;
 import com.telecom.repositories.CustomerRepository;
 
@@ -56,7 +57,7 @@ public class CustomerController {
 	
 	@RequestMapping("/customer")
     public String user(Model model) {
-       
+		model.addAttribute("command", new Complaint());       
          return "customer";
     }
 

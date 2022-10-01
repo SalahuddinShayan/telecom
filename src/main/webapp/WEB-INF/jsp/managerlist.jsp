@@ -22,6 +22,7 @@
      <th style ="margin-right: 50px">Manager Id</th>
      <th>Manager Name</th>
      <th>Password</th>
+     <th>Assigned Region</th>
      <th>Delete</th>
     </tr>
     <c:forEach var="manager" items="${managers}">
@@ -29,6 +30,7 @@
       <td>${manager.mid}</td>
       <td>${manager.mname}</td>
       <td>${manager.pword}</td>
+      <td>${manager.region}</td>
       <td><a href="deletemanager/${manager.mid}">Delete</a></td>  
      </tr>
     </c:forEach>
@@ -50,7 +52,12 @@
           <td>Password</td>   
           <td><form:input path="pword"  /></td>  
          </tr>          
+         <tr>
          <tr>    
+          <td>Assigned Region</td>   
+          <td><form:input path="region"  /></td>  
+         </tr>          
+         <tr>     
           <td> </td>    
           <td><input type="submit" value="Add/Update Manager" /></td>    
          </tr>    

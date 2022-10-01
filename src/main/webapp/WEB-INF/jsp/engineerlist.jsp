@@ -21,6 +21,7 @@
      <th>Engineer Id</th>
      <th>Engineer Name</th>
      <th>Password</th>
+     <th>Manager Id</th>
      <th>Delete</th>
     </tr>
     <c:forEach var="engineer" items="${engineers}">
@@ -28,6 +29,7 @@
       <td>${engineer.eid}</td>
       <td>${engineer.ename}</td>
       <td>${engineer.pword}</td>
+      <td>${engineer.mid}</td>
       <td><a href="deletemanager/${engineer.eid}">Delete</a></td>  
      </tr>
     </c:forEach>
@@ -48,6 +50,10 @@
          <tr>    
           <td>Password</td>   
           <td><form:input path="pword"  /></td>  
+         </tr>
+         <tr>    
+          <td>Manager Id</td>   
+          <td><form:input path="mid"  /></td>  
          </tr>          
          <tr>    
           <td> </td>    

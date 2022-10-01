@@ -18,6 +18,9 @@ public class Manager {
 	
 	@Column(name="pword")
 	private String pword;
+	
+	@Column(name="region")
+	private int region;
 
 	public int getMid() {
 		return mid;
@@ -42,6 +45,16 @@ public class Manager {
 	public void setPword(String pword) {
 		this.pword = pword;
 	}
+
+	public int getRegion() {
+		return region;
+	}
+
+	public void setRegion(int region) {
+		this.region = region;
+	}
+	
+	
 	
 	
 	

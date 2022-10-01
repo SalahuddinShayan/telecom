@@ -18,6 +18,9 @@ public class Engineer {
 	
 	@Column(name="pword")
 	private String pword;
+	
+	@Column(name="mid")
+	private int mid;
 
 	public int getEid() {
 		return eid;
@@ -41,6 +44,14 @@ public class Engineer {
 
 	public void setPword(String pword) {
 		this.pword = pword;
+	}
+
+	public int getMid() {
+		return mid;
+	}
+
+	public void setMid(int mid) {
+		this.mid = mid;
 	}
 	
 	
