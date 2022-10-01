@@ -11,6 +11,6 @@ import com.telecom.entity.Engineer;
 public interface EngineerRepository extends JpaRepository<Engineer, Integer> {
 	
 	@Query(value = "SELECT pword FROM Engineer WHERE eid = :eid", nativeQuery = true)
-    String  getp(@Param("eid") String eid);
+    String  getp(@Param("eid") int eid);
 
 }

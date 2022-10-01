@@ -20,7 +20,7 @@ public class Manager {
 	private String pword;
 	
 	@Column(name="region")
-	private int region;
+	private long region;
 
 	public int getMid() {
 		return mid;
@@ -46,11 +46,11 @@ public class Manager {
 		this.pword = pword;
 	}
 
-	public int getRegion() {
+	public long getRegion() {
 		return region;
 	}
 
-	public void setRegion(int region) {
+	public void setRegion(long region) {
 		this.region = region;
 	}
 	
