@@ -37,9 +37,28 @@ public class ComplaintController {
     }
     
     @RequestMapping("/savefeedback")
-    public String user(@ModelAttribute("complaint")Complaint complaint,Model model) {
+    public String feedback(@ModelAttribute("complaint")Complaint complaint,Model model) {
     	comrepo.save(complaint);
          return "savefeedback";
+    }
+    
+    @RequestMapping("/complaintlist")
+	public String customerlist(Model model) {
+		model.addAttribute("complaints",comrepo.findAll());
+	    return"complaintlist"; 
+	}
+    
+    @RequestMapping("/macomplaint")    
+    public String mcomp(@RequestParam long pin,Model m){    
+    	m.addAttribute("complaints", comrepo.getbypin(pin));
+    	m.addAttribute("command", new Complaint());
+        return "macomplaint";
+    }
+    
+    @RequestMapping("/assigneng")
+    public String assign(@ModelAttribute("complaint")Complaint complaint,Model model) {
+    	comrepo.save(complaint);
+         return "redirect:/mloginpage";
     }
 
 

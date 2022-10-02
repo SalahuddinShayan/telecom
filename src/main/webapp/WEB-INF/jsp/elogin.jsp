@@ -9,7 +9,7 @@
 <body>
 <h3>Welcome Employees! Please login according to your role:</h3>
 <a style="margin-right: 50px" href ="aloginpage">Admin Login</a>
-<a style="margin-right: 50px" href ="">Manager login</a>
+<a style="margin-right: 50px" href ="mloginpage">Manager login</a>
 <a style="margin-right: 50px" href ="eloginpage">Engineer Login</a>
 </body>
 </html>

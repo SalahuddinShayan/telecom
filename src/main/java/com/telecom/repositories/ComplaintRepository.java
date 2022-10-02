@@ -15,6 +15,9 @@ public interface ComplaintRepository extends JpaRepository<Complaint, Integer>{
 	@Query(value = "SELECT * FROM Complaint WHERE cuid=:cuid", nativeQuery = true)
     List<Complaint>  bycuid(@Param("cuid") int cuid);
 	
+	@Query(value = "SELECT * FROM Complaint WHERE pin = :pin", nativeQuery = true)
+	List<Complaint>  getbypin(@Param("pin") long pin);
+	
 	
 
 }

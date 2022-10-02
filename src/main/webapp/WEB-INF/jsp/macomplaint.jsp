@@ -25,11 +25,12 @@
      <th>Phone No.</th>
      <th>Complain</th>
      <th>Current Status</th>
+     <th>Id of Assigned Engineer</th>
      <th>Feedback</th>
     </tr>
     <c:forEach var="complaint" items="${complaints}">
      <tr>
-     <form:form method="post" action="savefeedback">    
+     <form:form method="post" action="assigneng">    
       <td><form:input path="coid" readonly="true" value="${complaint.coid}" /></td>
       <td><form:input path="cuid" readonly="true" value="${complaint.cuid}" /></td>
       <td><form:input path="name" readonly="true" value="${complaint.name}" /></td>
@@ -38,12 +39,9 @@
       <td><form:input path="pno" readonly="true" value="${complaint.pno}" /></td>
       <td><form:input path="complain" readonly="true" value="${complaint.complain}" /></td>
       <td><form:input path="status" readonly="true" value="${complaint.status}" /></td>
-      <td><form:input path="feedback" value="${complaint.feedback}" /></td>
-      <td><input type="submit" id="fb" value="Submit feedback" /></td>  
-      <script type="text/javascript">
-      if(document.getElementById("status").value=='RAISED'||document.getElementById("status").value=='WIP'){
-	       document.getElementById("fb").disabled = true;}
-      </script>
+      <td><form:input path="eid" value="${complaint.eid}" /></td>
+      <td><form:input path="feedback" readonly="true" value="${complaint.feedback}" /></td>
+      <td><input type="submit" value="Assign Engineer" /></td>  
       </form:form>
      </tr>
     </c:forEach>

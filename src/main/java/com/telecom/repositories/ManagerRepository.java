@@ -11,6 +11,11 @@ import com.telecom.entity.Manager;
 public interface ManagerRepository extends JpaRepository<Manager, Integer> {
 	
 	@Query(value = "SELECT pword FROM Manager WHERE mid = :mid", nativeQuery = true)
-    String  getp(@Param("mid") String mid);
+    String  getp(@Param("mid") int mid);
+	
+	@Query(value = "SELECT region FROM Manager WHERE mid = :mid", nativeQuery = true)
+    long  getpin(@Param("mid") int mid);
+	
+	
 
 }
