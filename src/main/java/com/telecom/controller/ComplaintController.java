@@ -60,6 +60,26 @@ public class ComplaintController {
     	comrepo.save(complaint);
          return "redirect:/mloginpage";
     }
+    
+    @RequestMapping("/ecomplaintlist")    
+    public String ecomp(@RequestParam int eid,Model m){    
+    	m.addAttribute("complaints", comrepo.byeid(eid));
+    	m.addAttribute("command", new Complaint());
+        return "ecomplaintlist";
+    }
+    
+    @RequestMapping("/updatestatus")
+    public String updatestatus(@ModelAttribute("complaint")Complaint complaint,Model model) {
+    	comrepo.save(complaint);
+         return "redirect:/eloginpage";
+    }
+    
+    @RequestMapping("/eucomplaint")    
+    public String eccomp(@RequestParam int eid, @RequestParam int cuid, Model m){    
+    	m.addAttribute("complaints", comrepo.byeidcuid(eid,cuid));
+    	m.addAttribute("command", new Complaint());
+        return "eucomplaint";
+    }
 
 
 }

@@ -18,6 +18,12 @@ public interface ComplaintRepository extends JpaRepository<Complaint, Integer>{
 	@Query(value = "SELECT * FROM Complaint WHERE pin = :pin", nativeQuery = true)
 	List<Complaint>  getbypin(@Param("pin") long pin);
 	
+	@Query(value = "SELECT * FROM Complaint WHERE eid=:eid", nativeQuery = true)
+    List<Complaint>  byeid(@Param("eid") int eid);
+	
+	@Query(value = "SELECT * FROM Complaint WHERE eid=:eid and cuid=:cuid ", nativeQuery = true)
+    List<Complaint>  byeidcuid(@Param("eid") int eid, @Param("cuid") int cuid);
+	
 	
 
 }
