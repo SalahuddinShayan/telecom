@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
 @SpringBootApplication
-public class TelecomApplication extends SpringBootServletInitializer{
+public class TelecomApplication{
 
 	public static void main(String[] args) {
 		SpringApplication.run(TelecomApplication.class, args);
