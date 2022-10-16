@@ -37,7 +37,7 @@
       <td><form:input path="pin" readonly="true" value="${complaint.pin}" /></td>
       <td><form:input path="pno" readonly="true" value="${complaint.pno}" /></td>
       <td><form:input path="complain" readonly="true" value="${complaint.complain}" /></td>
-      <td><form:input path="status" readonly="true" value="${complaint.status}" /></td>
+      <td><form:input path="status" id="status" readonly="true" value="${complaint.status}" /></td>
       <td><form:input path="feedback" value="${complaint.feedback}" /></td>
       <td><input type="submit" id="fb" value="Submit feedback" /></td>  
       <script type="text/javascript">

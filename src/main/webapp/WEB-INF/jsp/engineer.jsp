@@ -11,7 +11,7 @@
 <title>Engineer Home</title>
 </head>
 <body>
-
+<p style ="text-align: right"><a href ="home" >Logout</a></p>
 <form:form method="post" action="ecomplaintlist">    
         <table >
          <tr style="display:none;">  
@@ -49,6 +49,18 @@
        
        
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script>
+let timeout;
+console.log("Script")
+setTimeout(alertFunc, 30000);
 
+function alertFunc() {
+	if (confirm("Session Timeout!")) {
+		window.location.replace("http://localhost:8081/home");
+		} else {
+		window.location.replace("http://localhost:8081/home")
+		}
+}
+</script>
 </body>
 </html>
